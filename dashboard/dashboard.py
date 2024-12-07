@@ -100,8 +100,6 @@ def create_hourly_users_df(df):
 min_date = df["date"].min()
 max_date = df["date"].max()
 
-"""**SIDEBAR**"""
-
 with st.sidebar:
   st.image("https://raw.githubusercontent.com/mufa290300/Proyek_Analisis/main/images.png")
   st.sidebar.header("Filter:")
@@ -125,8 +123,6 @@ weekday_users_df = create_weekday_users_df(main_df)
 seasonly_users_df = create_seasonly_users_df(main_df)
 hourly_users_df = create_hourly_users_df(main_df)
 
-"""**MENU UTAMA**"""
-
 st.title(":bar_chart: Bike Sharing Dashboard")
 st.markdown("##")
 
@@ -143,8 +139,6 @@ with col3:
     st.metric("Total Registered Rides", value=total_registered_rides)
 
 st.markdown("---")
-
-"""**CHART**"""
 
 fig = px.line(monthly_users_df,
               x='yearmonth',
