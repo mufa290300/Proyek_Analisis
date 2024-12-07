@@ -12,6 +12,7 @@ pip install -r requirements.txt
 Masuk ke direktori proyek (Local):
 
 cd dashboard
+
 streamlit run dashboard.py
 
 Atau bisa dengan kunjungi website ini 
