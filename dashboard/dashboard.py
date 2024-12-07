@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv("hour_2.csv")
+df = pd.read_csv("D:\Proyek_Analisis\dashboard\hour_2.csv")
 df['date'] = pd.to_datetime(df['date'])
 
 df.head()
