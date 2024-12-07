@@ -15,4 +15,4 @@ cd dashboard
 
 streamlit run dashboard.py
 
-Atau bisa dengan kunjungi website ini 
+atau bisa kunjungi web ini https://bikesharingmufa.streamlit.app
