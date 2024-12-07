@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv("D:\Proyek_Analisis\dashboard\hour_2.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/mufa290300/Proyek_Analisis/main/dashboard/hour_2.csv")
 df['date'] = pd.to_datetime(df['date'])
 
 df.head()
@@ -103,7 +103,7 @@ max_date = df["date"].max()
 """**SIDEBAR**"""
 
 with st.sidebar:
-  st.image('D:\Proyek_Analisis\images.png')
+  st.image("https://raw.githubusercontent.com/mufa290300/Proyek_Analisis/main/images.png")
   st.sidebar.header("Filter:")
   start_date, end_date = st.date_input(
         label="Date Filter", min_value=min_date,
