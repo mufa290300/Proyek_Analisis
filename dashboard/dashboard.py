@@ -103,7 +103,7 @@ max_date = df["date"].max()
 """**SIDEBAR**"""
 
 with st.sidebar:
-  st.image("https://raw.githubusercontent.com/mufa290300/Proyek_Analisis/images.png")
+  st.image("https://raw.githubusercontent.com/mufa290300/Proyek_Analisis/main/images.png")
   st.sidebar.header("Filter:")
   start_date, end_date = st.date_input(
         label="Date Filter", min_value=min_date,
