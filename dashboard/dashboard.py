@@ -173,7 +173,24 @@ fig = px.line(hourly_users_df,
               markers=True,
               title='Count of bikeshare rides by hour of day').update_layout(xaxis_title='', yaxis_title='Total Rides')
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True) 
+
+total_casual_rides = main_df['casual'].sum()
+total_registered_rides = main_df['registered'].sum()
+pie_data = pd.DataFrame({
+    'Type': ['Casual', 'Registered'],
+    'Total Rides': [total_casual_rides, total_registered_rides]
+})
+
+fig_pie = px.pie(pie_data,
+                  values='Total Rides',
+                  names='Type',
+                  title='Comparison of Casual and Registered Riders',
+                  color_discrete_sequence=["skyblue", "orange"])  
+
+st.plotly_chart(fig_pie, use_container_width=True)
+
+
 hide_st_style = """
                 <style>
                 #MainMenu {visibility: hidden;}
